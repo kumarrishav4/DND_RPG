@@ -12,9 +12,14 @@ class Adventurer:
         self.AttackPower = AttackPower
         self.Defence = Defence
         self.Health = Health
+    
+    def attack(self, target):
+        print(f"{self.Name} attacks {target.Name}!")
+        target.update_Mana(-5)  # Decrease target's mana by 5
+        target.update_Health(-self.AttackPower)
 
     def p_status(self):
-        print(f'''
+        print(f'''your current status is
                 Name--{self.Name}, Race--{self.Race}, Level--{self.Level},
                 Mana--{self.Mana}, Strength--{self.Strength}, Dexterity--{self.Dexterity},
                 Intelligence--{self.Intelligence}, Charisma--{self.Charisma}, Attack Power--{self.AttackPower},
