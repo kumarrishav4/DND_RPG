@@ -14,8 +14,8 @@ class Monster:
 
     def attack(self, target):
         print(f"{self.Name} attacks {target.Name}!")
-        target.update_Mana(-5)  # Decrease target's mana by 5
-        target.update_Health(-self.AttackPower)  # Decrease target's health by the attacker's AttackPower
+        target.update_Mana(-5)  
+        target.update_Health(-self.AttackPower)  
 
     def m_status(self):
         print(f'''
